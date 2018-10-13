@@ -1,5 +1,5 @@
 <p align='center'>
-  <img src="./img/build_sage.png" style='width: 400px; margin: 200px'/>
+  <img src="./img/build_sage_orig.png" style='width: 400px; margin: 200px'/>
 </p>
 
 BuildSage
