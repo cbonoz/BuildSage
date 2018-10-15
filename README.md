@@ -21,12 +21,11 @@ Uses a python backend to search through an indexed collection of construction re
 
 Fields of relevance currently used for consideration of different lessons learned
 <pre>
-  Country
+  Title
+  Description
   Project Type
-  Client
-  Contract Type
+  Country
   Construction Technology
-  Activity
   Importance level
   Experience Type: Best Practice, Problem, or Both
 </pre>
@@ -43,8 +42,28 @@ How to deploy an NLP model and connect it to a live, running website
 ## What's next for BuildSage
 * Release to the public and collect more build reports that can be indexed and returned in search results.
 
+### Running the app
+The app requires both the backend (python) server and webserver (react) to be running.
+
+To start the python server:
+<pre>
+  pip install -r requirements.txt
+  python app.py
+</pre>
+
+</pre>
+To start the web server, use the following command:
+<pre>
+  yarn && yarn start
+</pre>
+
+The web server should now be running on port `3000` (with the backend python server on port `8080`).
 
 ### Useful Links
+* https://github.com/explosion/spacy-services/tree/master/displacy
+* https://github.com/explosion/spacy-services
+
+### Construction Lesson/Report Resources
 * https://www.designingbuildings.co.uk/wiki/Lessons_learned_report_for_building_design_and_construction
 * https://www.sciencedirect.com/science/article/pii/S1877042816308783
 * http://www.horstconstruction.com/lessons-challenging-construction-project/
