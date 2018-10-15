@@ -59,6 +59,9 @@ To start the web server, use the following command:
 
 The web server should now be running on port `3000` (with the backend python server on port `8080`).
 
+### Example Searches
+* I'm building a condo for a commercial application
+
 ### Useful Links
 * https://github.com/explosion/spacy-services/tree/master/displacy
 * https://github.com/explosion/spacy-services
