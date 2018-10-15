@@ -24,12 +24,9 @@ class Search extends Component {
         this.setState({ searchText: e.target.value });
     }
 
-    extractKeywordsAndFindResults() {
+    extractKeywordsAndFindResults(parsed) {
         const self = this
-        const { parsed } = this.state
         const words = parsed.words
-        const arc = parsed.arcs
-        let searchResults = []
         const targetWords = words.filter(word => word.tag === 'VERB' || word.tag === 'NOUN' || word.tag === 'ADJ')
         getSearchResults(targetWords).then(res => {
             console.log('results', JSON.stringify(res))
@@ -45,12 +42,11 @@ class Search extends Component {
         getParsings(searchText).then(res => {
             const parsed = res.data
             console.log('parsed', parsed)
-            self.setState({ parsed, searchResults: [true] })
             disp.render(parsed, {
                 color: '#000',
                 width: 800,
             });
-            self.extractKeywordsAndFindResults()
+            self.extractKeywordsAndFindResults(parsed)
         })
     }
 
@@ -65,7 +61,7 @@ class Search extends Component {
     }
 
     render() {
-        const { parsed, searchResults, searchText } = this.state
+        const { searchResults, searchText } = this.state
 
         const hasResults = (searchResults && searchResults.length > 0)
 
@@ -102,15 +98,13 @@ class Search extends Component {
 
                 </div>
                 <div className='search-diagram-area centered'>
-                    {hasResults && <div>
-                        <h2>Query Breakdown</h2>
-                        <div id="displacy"></div>
-                    </div>
-                    }
+                    {hasResults && <h2 className="diagram-header">Understanding your Query</h2>}
+                    <hr/>
+                    <div id="displacy"></div>
                 </div>
                 <div className='search-result-area'>
                     {hasResults && <div className='search-results'>
-                        <h2>Search Results:</h2><br/>
+                        <h2>Search Results by Relevance:</h2><br/>
                         {searchResults.map((lesson, i) => {
                             return <div key={i}>
                                 {/* {lesson.score}: {JSON.stringify(lesson)} */}
@@ -118,6 +112,7 @@ class Search extends Component {
                                     title={lesson.title}
                                     score={lesson.score}
                                     projectType={lesson.project_type}
+                                    experienceType={lesson.experience_type}
                                     description={lesson.description} />
                             </div>
                         })}
