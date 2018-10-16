@@ -20,20 +20,20 @@ Users can then contribute back to the platform and submit new lessons that can b
 
 ## Screenshots
 
-<h4>Home page:</h4>
 <p align='center'>
+<h4>Home page</h4>
   <img src="./img/home_page.png" width=600/>
 </p>
-<h4>Search page:</h4>
 <p align='center'>
+<h4>Search page</h4>
   <img src="./img/search_page.png" width=600/>
 </p>
-<h4>Example query and parsing:</h4>
 <p align='center'>
+<h4>Example query and parsing</h4>
   <img src="./img/foundation_search.png" width=600/>
 </p>
-<h4>Uploading a new indexed Report:</h4>
 <p align='center'>
+<h4>Uploading a new indexed Report</h4>
   <img src="./img/new_report.png" width=600/>
 </p>
 
