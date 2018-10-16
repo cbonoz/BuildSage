@@ -47,7 +47,7 @@ How to deploy an NLP model and connect it to a live, running website.
 * Release to the public and collect more build reports that can be indexed and returned in search results.
 
 ### Running the app
-The app requires both the backend (python) server and webserver (react) to be running. The backend server starts with a small  base set of best practices around construction that can be searched.
+The app requires both the backend (python) server and webserver (react) to be running. The backend server starts with a small base set of construction best practices that can be searched.
 
 To start the python server:
 <pre>
