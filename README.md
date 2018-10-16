@@ -14,30 +14,31 @@ Construction companies are project-based organizations, since much of their know
 Implementing proper closeout might reduce the cost of construction consultants and make current contractors more competitive.
 
 ## What it does
-Use NLP to search lessons learned from past construction experiences.
+Uses a combination of NLP and fuzzy search to parse through a database of uploaded lessons learned from past construction experiences. Users can submit new lessons that can be indexed and discovered by other users.
 
 ## How I built it
-Uses a python backend to search through an indexed collection of construction reports based on the user's query or current task. Escalates the most pertinent reports for the given task up to the user.
+Uses a python backend to search through an collection of construction reports based on the user's query. Escalates the most pertinent reports for the given task up to the user based on a parsed version of the request.
 
-Fields of relevance currently used for consideration of different lessons learned
+Fields of relevance currently used for consideration of different lessons learned. This could be expanded in future work.
+
 <pre>
-  Title
-  Description
+  Title: Theme of the lesson
+  Description: More detail on the lesson
   Project Type
-  Country
-  Construction Technology
-  Importance level
+  Country: Currently just U.S.
+  Construction Technology: Materials used, equipment, etc.
+  Importance level: low (1), medium (2), high (3)
   Experience Type: Best Practice, Problem, or Both
 </pre>
 
 ## Challenges I ran into
-Aggregating the data and implementing the NLP such that pertinent results could be returned for a query.
+Gathering data and implementing the NLP/search such that pertinent results could be returned for a query.
 
 ## Accomplishments that I'm proud of
 It works.
 
 ## What I learned
-How to deploy an NLP model and connect it to a live, running website
+How to deploy an NLP model and connect it to a live, running website.
 
 ## What's next for BuildSage
 * Release to the public and collect more build reports that can be indexed and returned in search results.
@@ -61,6 +62,8 @@ The web server should now be running on port `3000` (with the backend python ser
 
 ### Example Searches
 * I'm building a condo for a commercial application
+* I'm laying the foundation for a new residence
+* etc..
 
 ### Useful Links
 * https://github.com/explosion/spacy-services/tree/master/displacy
