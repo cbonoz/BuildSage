@@ -10,7 +10,7 @@ def chunks(l, n):
 
 COUNTRIES = ['US']
 PROJECT_TYPES = ['Condo', 'Residence', 'Apartment', 'Civil', 'Commercial', 'Industrial', 'Government', 'Retail']
-REPORT_LINKS = ['https://bit.ly/2CiWxqZ', '']
+REPORT_LINKS = ['']
 IMPORTANCES = [1,2,3]
 CONSTRUCTION_TECH = [
     'Ceramics',
