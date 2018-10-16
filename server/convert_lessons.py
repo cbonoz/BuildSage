@@ -10,6 +10,7 @@ def chunks(l, n):
 
 COUNTRIES = ['US']
 PROJECT_TYPES = ['Condo', 'Residence', 'Apartment', 'Civil', 'Commercial', 'Industrial', 'Government', 'Retail']
+REPORT_LINKS = ['https://bit.ly/2CiWxqZ', '']
 IMPORTANCES = [1,2,3]
 CONSTRUCTION_TECH = [
     'Ceramics',
@@ -35,5 +36,6 @@ with open('lessons.txt', 'r') as f:
             'construction_technology': get_random(CONSTRUCTION_TECH),
             'importance': get_random(IMPORTANCES),
             'experience_type': get_random(EXPERIENCE_TYPE),
-            'description': item[1].rstrip('\n')
+            'description': item[1].rstrip('\n'),
+            'report_link': get_random(REPORT_LINKS)
         })

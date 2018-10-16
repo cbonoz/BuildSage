@@ -17,6 +17,7 @@ const schema = {
         construction_technology: { type: "string", title: "Construction Technology", default: "Steel" },
         importance: { type: "number", title: "Importance level: 1 (low), 2 (medium), 3 (high)", default: 2 },
         experience_type: { type: "string", title: "Best Practice or Problem", default: "Best Practice" },
+        report_link: { type: "string", title: "Report Link", default: "" },
     }
 };
 

@@ -9,6 +9,7 @@ class LessonCard extends Component {
         avatar: "http://gravatar.com/avatar/ab1d28e0c265caf52e6f22b4b1e2ac98",
         description: "This is an example of tweet mesage talking about code.",
         experienceType: "Best Practice",
+        reportLink: "",
         score: 100
     };
 
@@ -19,7 +20,7 @@ class LessonCard extends Component {
     }
 
     render() {
-        const {experienceType, description, title, projectType, score } = this.props
+        const {experienceType, description, title, projectType, score, reportLink } = this.props
 
         const textColor = this.getGreenToRed(score)
 
@@ -33,7 +34,10 @@ class LessonCard extends Component {
                         <h4 className="card-title">{title}</h4>
                         <h6 className="card-meta">{experienceType} from a {projectType} project</h6>
                     </div>
-                    <div className="card-body">{description}</div>
+                    <div className="card-body">
+                    {description}
+                    {reportLink && <a href={reportLink} target="_blank">&nbsp;Link.</a>}
+                    </div>
                     <div className="card-footer">
                         <button className="cward-btn lnr lnr-bubble">
                         </button>
