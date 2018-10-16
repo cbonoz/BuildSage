@@ -63,7 +63,7 @@ def search(keywords: str = 'building'):
     results = sorted(scored_lessons, key=lambda x: x['score'], reverse=True)
     # results = process.extract(keywords, lessons, limit=20)
     # lessons = list(map(lambda x: x['lesson'], db.all()))
-    print('results', results)
+    # print('results', results)
     return {'data': results, 'keywords': keywords}
 
 
@@ -71,7 +71,7 @@ def search(keywords: str = 'building'):
 def dep(text: str = "Hello World.", model: str = "en", collapse_punctuation: bool=False,
         collapse_phrases: bool=False):
     """Get dependencies for displaCy visualizer."""
-    print(text, model)
+    # print(text, model)
     nlp = MODELS[model]
     doc = nlp(text)
     if collapse_phrases:
