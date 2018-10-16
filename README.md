@@ -9,26 +9,29 @@ BuildSage leverages NLP and AI to bring the most pertinent "lessons learned" to 
 
 ## Inspiration
 
-Construction companies are project-based organizations, since much of their knowledge is generated on site, from projects they carry out. In fact, projects are an important source of expert know-how and organizational knowledge, but lessons-learned from them are not systematically incorporated into subsequent projects, evidencing a lack of knowledge management and learning culture in local construction companies. This article describes a research effort that addressed this situation and developed a lessons-learned system to help construction companies to overcome these limitations. 
+Construction companies are often considered project-based organizations, since much of their knowledge is generated on site, as a result of projects they physically carry out. Unfortunately, the learnings from these projects are often kept internal, which can easily lead to other teams and companies repeating the same mistakes. Completing projects gives valuable know-how and organizational knowledge, but the lessons learned from them might still not systematically incorporated into subsequent projects, evidencing a lack of knowledge sharing and learning. This project establishes an open and collaborative community where construction groups can share and overcome these traditional limitations to project review and standardization.
 
-Implementing proper closeout might reduce the cost of construction consultants and make current contractors more competitive.
+Aggregating these results could not only improve efficiency, cost savings, and time for future efforts, but also result in improved safety for future repeated projects.
 
 ## What it does
-Uses a combination of NLP and fuzzy search to parse through a database of uploaded lessons learned from past construction experiences. Users can submit new lessons that can be indexed and discovered by other users.
+Uses a combination of NLP and fuzzy search to parse through a database of uploaded lessons learned from past construction experiences. This app is able to interpret and decompose human-written sentences to deliver search results that match the core meaning of a desired construction project.
+
+Users can then contribute back to the platform and submit new lessons that can be discovered by other users.
 
 ## How I built it
 Uses a python backend to search through an collection of construction reports based on the user's query. Escalates the most pertinent reports for the given task up to the user based on a parsed version of the request.
 
-Fields of relevance currently used for consideration of different lessons learned. This could be expanded in future work.
+Fields of relevance currently used for consideration of different lessons learned. These could be expanded in future work.
 
 <pre>
-  Title: Theme of the lesson
-  Description: More detail on the lesson
-  Project Type
+  Title: Theme of the Construction Report
+  Description: More detailed information, or abstract
+  Project Type: Type of the construction project
   Country: Currently just U.S.
   Construction Technology: Materials used, equipment, etc.
   Importance level: low (1), medium (2), high (3)
   Experience Type: Best Practice, Problem, or Both
+  Report Link: URL to the original report document
 </pre>
 
 ## Challenges I ran into
@@ -44,7 +47,7 @@ How to deploy an NLP model and connect it to a live, running website.
 * Release to the public and collect more build reports that can be indexed and returned in search results.
 
 ### Running the app
-The app requires both the backend (python) server and webserver (react) to be running.
+The app requires both the backend (python) server and webserver (react) to be running. The backend server starts with a small  base set of best practices around construction that can be searched.
 
 To start the python server:
 <pre>
