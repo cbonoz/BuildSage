@@ -11,9 +11,9 @@ const schema = {
     type: "object",
     properties: {
         country: { type: "string", title: "Country", default: 'US' },
+        title: { type: "string", title: "Title", default: 'Overused Materials' },
+        description: { type: "string", title: "Description", default: "Overpurchased a particular material while building this project. Scope ahead of time" },
         project_type: { type: "string", title: "Project Type", default: "Condo" },
-        title: { type: "string", title: "Client", default: 'Overused Materials' },
-        description: { type: "string", title: "Activity Type", default: "Overpurchased a particular material while building this project. Scope ahead of time" },
         construction_technology: { type: "string", title: "Construction Technology", default: "Steel" },
         importance: { type: "number", title: "Importance level: 1 (low), 2 (medium), 3 (high)", default: 2 },
         experience_type: { type: "string", title: "Best Practice or Problem", default: "Best Practice" },
