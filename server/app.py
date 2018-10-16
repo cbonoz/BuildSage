@@ -31,8 +31,7 @@ def models():
 
 
 @hug.post('/report')
-def report_upload(title: str, description: str, construction_technology: str, project_type: str, experience_type: str, 
-                  importance: int = 2, country: str = 'US'):
+def report_upload(title: str, description: str, construction_technology: str, project_type: str, experience_type: str, importance: int = 2, country: str = 'US'):
     lesson = {
         'country': country,
         'title': title,
