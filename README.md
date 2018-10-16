@@ -18,6 +18,25 @@ Uses a combination of NLP and fuzzy search to parse through a database of upload
 
 Users can then contribute back to the platform and submit new lessons that can be discovered by other users.
 
+## Screenshots
+
+<h3>Home page</h3>
+<p align='center'>
+  <img src="./img/home_page.png" width=600/>
+</p>
+<h3>Search page</h3>
+<p align='center'>
+  <img src="./img/search_page.png" width=600/>
+</p>
+<h3>Example Query</h3>
+<p align='center'>
+  <img src="./img/foundation_search.png" width=600/>
+</p>
+<h3>Uploading a new indexed Report</h3>
+<p align='center'>
+  <img src="./img/new_report.png" width=600/>
+</p>
+
 ## How I built it
 Uses a python backend to search through an collection of construction reports based on the user's query. Escalates the most pertinent reports for the given task up to the user based on a parsed version of the request.
 
