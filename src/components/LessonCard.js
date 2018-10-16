@@ -36,7 +36,7 @@ class LessonCard extends Component {
                     </div>
                     <div className="card-body">
                     {description}
-                    {reportLink && <a href={reportLink} target="_blank">&nbsp;Link.</a>}
+                    {reportLink && <span>&nbsp;<a href={reportLink} target="_blank">Link</a>.</span>}
                     </div>
                     <div className="card-footer">
                         <button className="cward-btn lnr lnr-bubble">

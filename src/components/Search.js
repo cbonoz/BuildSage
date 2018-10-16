@@ -113,7 +113,7 @@ class Search extends Component {
                                     score={lesson.score}
                                     projectType={lesson.project_type}
                                     experienceType={lesson.experience_type}
-                                    reportLink={lesson.reportLink}
+                                    reportLink={lesson.report_link}
                                     description={lesson.description} />
                             </div>
                         })}
